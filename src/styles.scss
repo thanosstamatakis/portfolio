@@ -29,10 +29,14 @@ body {
 /* You can add global styles to this file, and also import other style files */
 :root {
     // Initial gradient colors
-    --gradient-color-1: #ef008f;
-    --gradient-color-2: #6ec3f4;
-    --gradient-color-3: #7038ff;
-    --gradient-color-4: #e2e2e2;
+    // --gradient-color-1: #ef008f;
+    // --gradient-color-2: #6ec3f4;
+    // --gradient-color-3: #7038ff;
+    // --gradient-color-4: #e2e2e2;
+    --gradient-color-1: #c173ff;
+    --gradient-color-2: #f9d3cb;
+    --gradient-color-3: #b2eeff;
+    --gradient-color-4: #96b9ff;
     // Box shadows
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);

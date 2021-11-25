@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
+import { NzMessageService } from 'ng-zorro-antd/message';
 import { fade, logoAnimation } from './helpers/animations';
 
 declare var Gradient: any;
@@ -9,9 +10,11 @@ declare var Gradient: any;
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, AfterViewInit {
-    constructor() {}
+    constructor(private message: NzMessageService) {}
 
-    public ngOnInit(): void {}
+    public ngOnInit(): void {
+        this.message.info('Site is still under construction. Please excuse any bugs you might find.', { nzDuration: 10000 });
+    }
 
     public ngAfterViewInit(): void {}
 }

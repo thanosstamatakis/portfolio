@@ -1,1 +1,16 @@
 @import 'src/styles.scss';
+
+::ng-deep {
+    .ant-message-notice-content {
+        background: rgba(255, 255, 255, 0.65);
+        border-radius: 0.5rem;
+        box-shadow: var(--shadow-lg);
+        backdrop-filter: blur(20px);
+    }
+
+    .ant-message-custom-content {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+}
