@@ -1,1 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..800&display=swap');
+
+@mixin no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin no-drag {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Outfit', sans-serif;
+}
+
 /* You can add global styles to this file, and also import other style files */
+:root {
+    // Initial gradient colors
+    --gradient-color-1: #ef008f;
+    --gradient-color-2: #6ec3f4;
+    --gradient-color-3: #7038ff;
+    --gradient-color-4: #e2e2e2;
+    // Box shadows
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+    --shadow-none: 0 0 #0000;
+    // Brand Colors
+    --nokia-color: #1c4598;
+    --nokia-color-secondary: #81a3ff;
+    --gymq-color: #fa6400;
+    --gymq-color-secondary: #fae250;
+    --drasys-color: #117243;
+    --drasys-color-secondary: #82daa3;
+    --covid-color: #2f4858;
+    --covid-color-secondary: #1c6e7d;
+}
+
+.scr {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: 700ms ease-in-out;
+
+    &.fade-up {
+        opacity: 1;
+        transform: translateY(0px);
+
+        @for $i from 1 through 10 {
+            .scr:nth-child(#{$i}) {
+                opacity: 1;
+                transform: translateY(0px);
+                transition-delay: #{$i * 100}ms;
+            }
+        }
+    }
+}
+
+.scr-fir {
+    opacity: 0;
+    transform: translate(60px, 10px);
+    transition: 700ms ease-in-out;
+
+    &.fade-in-right {
+        opacity: 1;
+        transform: translate(0px, 0px);
+
+        @for $i from 1 through 10 {
+            .scr-fir:nth-child(#{$i}) {
+                opacity: 1;
+                transform: translate(0px, 0px);
+                transition-delay: #{$i * 300}ms;
+            }
+        }
+    }
+}
+
+img {
+    @include no-drag();
+    @include no-select();
+}

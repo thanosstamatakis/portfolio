@@ -1,0 +1,53 @@
+<div class="background">
+    <div class="form-wrapper">
+        <form nz-form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+            <h1>Contact me</h1>
+            <nz-form-item>
+                <nz-form-control nzErrorTip="Please enter a valid email address">
+                    <nz-input-group nzPrefixIcon="mail">
+                        <input formControlName="email" nz-input nzSize="large" placeholder="Email" />
+                    </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-control nzErrorTip="The name is required">
+                    <nz-input-group nzPrefixIcon="user">
+                        <input formControlName="name" nz-input nzSize="large" placeholder="Name" />
+                    </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-control nzErrorTip="The message is required">
+                    <nz-input-group>
+                        <nz-textarea-count [nzMaxCharacterCount]="200">
+                            <textarea rows="4" formControlName="message" nz-input nzSize="large" placeholder="Message"></textarea>
+                        </nz-textarea-count>
+                    </nz-input-group>
+                </nz-form-control>
+            </nz-form-item>
+            <nz-form-item>
+                <nz-form-control>
+                    <button nzBlock nz-button nzType="primary" [disabled]="!contactForm.valid">Send</button>
+                </nz-form-control>
+            </nz-form-item>
+            <div class="or">or</div>
+        </form>
+        <!-- <div class="line">or</div> -->
+        <div class="social-media-wrapper">
+            <h1>Find me on</h1>
+            <div class="social-wrapper">
+                <div class="icon-wrapper">
+                    <a target="_blank" href="https://www.linkedin.com/in/tstamatakis/"><img src="/assets/social/in.svg" alt="" /></a>
+                    <a target="_blank" href="https://github.com/thanosstamatakis"><img src="/assets/social/gh.svg" alt="" /></a>
+                    <a target="_blank" href="https://gitlab.com/stamatakis"><img src="/assets/social/gl.svg" alt="" /></a>
+                    <a target="_blank" href="https://www.facebook.com/thanos.stamatakis/"><img src="/assets/social/fb.svg" alt="" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ball large"></div>
+    <div class="ball medium"></div>
+    <div class="ball small"></div>
+    <div class="ball topsmall"></div>
+</div>

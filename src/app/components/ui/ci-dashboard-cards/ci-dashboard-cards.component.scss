@@ -1,0 +1,36 @@
+@import 'src/styles.scss';
+
+.row {
+    @include no-select;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    color: black;
+
+    &:first-of-type {
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom: none;
+    }
+    &:last-of-type {
+        border-top: none;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+    .table-col {
+        width: max-content;
+        height: 50px;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        padding: 0px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:last-of-type {
+            border-right: none;
+        }
+    }
+}

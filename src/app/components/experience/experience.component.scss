@@ -1,0 +1,175 @@
+@import 'src/styles.scss';
+
+.wrapper {
+    max-width: 1200px;
+    display: block;
+    margin: auto;
+    padding: 200px 20px;
+
+    .section-title {
+        font-size: 75px;
+        font-weight: bold;
+        margin-bottom: 200px;
+    }
+
+    .experience-wrapper {
+        margin-left: 20px;
+        .experience {
+            position: relative;
+
+            &::before {
+                width: 5px;
+                height: 120%;
+                top: -10%;
+                content: '';
+                position: absolute;
+                left: -20px;
+                background: linear-gradient(white 0%, var(--nokia-color) 20%, var(--nokia-color) 80%, white 100%);
+            }
+
+            .title {
+                font-size: 45px;
+                font-weight: bold;
+                line-height: 1;
+                margin-bottom: 10px;
+                position: relative;
+
+                img {
+                    @include no-drag;
+                    height: 32px;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    left: -27px;
+                    width: 20px;
+                    height: 20px;
+                    top: calc(50% - 7.5px);
+                    border-radius: 50%;
+                    background: var(--nokia-color);
+                    box-shadow: var(--shadow-md);
+                }
+            }
+            .timeframe {
+                letter-spacing: 1px;
+                font-size: 26px;
+                margin-bottom: 40px;
+                line-height: 1;
+                opacity: 0.65;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 16px;
+            }
+
+            .description {
+                font-size: 22px;
+
+                .section {
+                    margin-bottom: 1em;
+                }
+            }
+        }
+    }
+
+    .projects {
+        .section-title-sm {
+            font-size: 45px;
+            line-height: 1;
+            margin-top: 120px;
+            margin-bottom: 40px;
+        }
+
+        .project-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .project {
+                flex: 1;
+                margin: 0px 20px;
+                min-width: 260px;
+                border-radius: 0.5rem;
+                position: relative;
+                overflow: hidden;
+                box-shadow: var(--shadow-2xl);
+                background: linear-gradient(135deg, var(--nokia-color), var(--nokia-color-secondary));
+                background-position: 0% 0%;
+                padding: 40px;
+                color: white;
+
+                &:first-of-type {
+                    margin-left: 0;
+                }
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+
+                .title {
+                    font-size: 32px;
+                    font-weight: 500;
+                }
+                .description {
+                    font-size: 22px;
+                    opacity: 0.65;
+                    font-weight: 300;
+                    text-align: justify;
+                }
+            }
+        }
+
+        .impress-section {
+            min-height: 300px;
+
+            * {
+                display: block;
+                position: absolute;
+                bottom: 150px;
+                transform: translateY(50%);
+                left: 20%;
+                mask-image: linear-gradient(90deg, #fff 0%, transparent 90%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper {
+        padding: 120px 20px;
+
+        .section-title {
+            font-size: 65px;
+            margin-bottom: 120px;
+        }
+
+        .experience-wrapper {
+            margin-left: 0px;
+            .experience {
+                &::before {
+                    display: none;
+                }
+            }
+
+            .title {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+        .projects {
+            .section-title-sm {
+            }
+
+            .project-wrapper {
+                .project {
+                    padding: 40px 20px;
+                    text-align: left;
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

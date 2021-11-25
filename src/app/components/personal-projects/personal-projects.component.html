@@ -1,0 +1,273 @@
+<div class="wrapper">
+    <div class="scr section-title" animateOnScroll animationName="fade-up">Personal projects</div>
+    <!-- Brightness Control -->
+    <div class="experience-wrapper brightness">
+        <div class="scr experience" animateOnScroll animationName="fade-up">
+            <div class="scr title-wrapper">
+                <img src="/assets/personal/brightness.svg" alt="" />
+                <div class="title-timeframe-col">
+                    <div class="scr title">Brightness Control</div>
+                    <div class="scr timeframe">Nov 2021 - Present</div>
+                </div>
+            </div>
+            <div class="scr description">
+                <div class="section">
+                    Brightness control is a native macOS status bar application that listens for the F1 & F2 keys and changes brightness for external monitors
+                    utilizing the DDC/CI protocol. It was my first attempt to create a native macOS app and i had to learn how to use XCode as well as Swift and
+                    SwiftUI.
+                </div>
+                <div class="section">
+                    Brightness control also displays the native macOS huds that appear when changing the brightness on a Macbook or iMac to make the experience
+                    feel more authentic.
+                </div>
+                <div class="section">
+                    <a target="blank" href="https://drasysbio.com/"><i nz-icon nzType="github" nzTheme="outline"></i> Find it on Git</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Brightness Control Details -->
+    <div class="projects brightness">
+        <div class="scr section-title-sm" animateOnScroll [useScroll]="false" animationName="fade-up">Project overview</div>
+        <div class="project-wrapper">
+            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+                <div class="scr title">Native UI</div>
+                <div class="scr description">
+                    It was an extremely important goal to make the user interface feel native to macOS when building brightness control. This was made easy with
+                    the use of SwiftUI and the excellent development experience in XCode.
+                </div>
+                <div class="static-impress brightness-design">
+                    <img src="/assets/personal/brightness-design.png" alt="" />
+                </div>
+            </div>
+            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+                <div class="scr title">Native Performance</div>
+                <div class="scr description">
+                    The fact that brightness control is made with Swift and utilizes native macOS frameworks and rendering means that it is extremely
+                    performant. Just 17.8Mb of RAM and 0% CPU on idle.
+                </div>
+                <div class="static-impress drasys-frontend brightness-perf">
+                    <div class="decoration"></div>
+                    <div class="decoration secondary"></div>
+                    <div class="decoration tertiary"></div>
+                    <img class="scr" src="/assets/logos/swift.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Drasys -->
+    <div class="experience-wrapper drasys">
+        <div class="scr experience" animateOnScroll animationName="fade-up">
+            <div class="scr title-wrapper">
+                <img src="/assets/personal/drasys.svg" alt="" />
+                <div class="title-timeframe-col">
+                    <div class="scr title">
+                        Drasys bio
+                        <!-- <img src="/assets/personal/gymq.svg" alt="" /> -->
+                    </div>
+                    <div class="scr timeframe">Sep 2020 - Present</div>
+                </div>
+            </div>
+            <div class="scr description">
+                <div class="section">
+                    Drasys bio is a startup from Patras, Greece that is involved in constructing bioreactors with innovative architectures as well as a state of
+                    the art software solution to control multiple bioreactors and their subdevices (pumps, sensors, thermals etc.)
+                </div>
+                <div class="section">
+                    My team and i had to come up with a solution to abstractify the control process and make the development process more accessible for web
+                    developers.
+                </div>
+                <div class="section">
+                    <a target="blank" href="https://drasysbio.com/"><i nz-icon nzType="link" nzTheme="outline"></i> Drasys bio website</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Drasys Details -->
+    <div class="projects drasys">
+        <div class="scr section-title-sm" animateOnScroll [useScroll]="false" animationName="fade-up">Project overview</div>
+        <div class="project-wrapper">
+            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+                <div class="scr title">UI/UX design</div>
+                <div class="scr description">
+                    I was responsible for designing all the views for the Drasys bio desktop application, as well as ensuring consistency between views in each
+                    platform while preserving native features. In addition i was responsible for rendering various assets in Blender to make the app more
+                    interactive.
+                </div>
+                <div class="static-impress gymq-design">
+                    <img src="/assets/personal/drasys-design.svg" alt="" />
+                </div>
+            </div>
+            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+                <div class="scr title">Frontend development</div>
+                <div class="scr description">
+                    We created the Drasys bio desktop app using Electron, Angular and Vue.js (for some smaller components). We also used web sockets to make the
+                    data connection between hardware devices and any connected cliend real time.
+                </div>
+                <div class="static-impress drasys-frontend">
+                    <div class="decoration"></div>
+                    <div class="decoration secondary"></div>
+                    <div class="decoration tertiary"></div>
+                    <img class="scr" src="/assets/logos/angular.svg" alt="" />
+                    <img class="scr" src="/assets/logos/ionic.svg" alt="" />
+                    <img class="scr" src="/assets/logos/electron.svg" alt="" />
+                </div>
+            </div>
+            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+                <div class="scr title">From hardware to the web</div>
+                <div class="scr description">
+                    Controlling the bioreactor environment is impossible without considering the hardware component. By using a backend server that communicates
+                    via mqtt with a RS485 master device we can essentially convert our bioreactors to cloud based bioreactors.
+                </div>
+                <div class="static-impress drasys-hardware">
+                    <img src="/assets/personal/deth-2.png" alt="" />
+                </div>
+            </div>
+            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+                <div class="scr title">Sensor calibration</div>
+                <div class="scr description">
+                    To make the system as easy to use as possible we baked a sensor calibration workflow inside the desktop client.
+                </div>
+                <div class="static-impress drasys-sensor">
+                    <img src="/assets/personal/sensor.png" alt="" srcset="" />
+                    <!-- <img src="/assets/personal/notification.svg" alt="" /> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- GymQ -->
+    <div class="experience-wrapper gymq">
+        <div class="scr experience" animateOnScroll animationName="fade-up">
+            <div class="scr title-wrapper">
+                <img src="/assets/personal/gymq.svg" alt="" />
+                <div class="title-timeframe-col">
+                    <div class="scr title">
+                        GymQ
+                        <!-- <img src="/assets/personal/gymq.svg" alt="" /> -->
+                    </div>
+                    <div class="scr timeframe">Jun 2020 - Present</div>
+                </div>
+            </div>
+            <div class="scr description">
+                <div class="section">
+                    GymQ is an all in one client management/engagement solution for gym owners, giving them the ability to interact with their customers. It
+                    provides messaging (email, SMS) functionality, a flexible online booking system to address crowding issues in gyms during the pandemic. It
+                    also provides a powerful payment system with the ability to log physical payments or accept online payments using the Stripe Connect API.
+                </div>
+                <div class="section">Currently only for greek gyms</div>
+            </div>
+        </div>
+    </div>
+    <!-- GymQ Details -->
+    <div class="projects gymq">
+        <div class="section-title-sm" animateOnScroll [useScroll]="false" animationName="fade-up">Project overview</div>
+        <div class="project-wrapper">
+            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+                <div class="scr title">UI/UX design</div>
+                <div class="scr description">
+                    I was responsible for designing all the views for the GymQ web application, as well as ensuring ease of use for less technichaly inclined
+                    users. In addition i designed the QymQ promotional website and the mobile application for iOS and Android.
+                </div>
+                <div class="static-impress gymq-design">
+                    <img src="/assets/personal/gymq-design.svg" alt="" />
+                </div>
+            </div>
+            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+                <div class="scr title">Frontend development</div>
+                <div class="scr description">
+                    We created the GymQ web app using the Angular framework. By using Angular and writting maintainable components and services we could
+                    transfer all existing work from the web to mobile platforms using Ionic in just one week.
+                </div>
+                <div class="static-impress gymq-frontend">
+                    <div animateOnScroll animationName="animate" class="decoration"></div>
+                    <div animateOnScroll animationName="animate" class="decoration secondary"></div>
+                    <img class="scr" src="/assets/logos/angular.svg" alt="" />
+                    <img class="scr" src="/assets/logos/ionic.svg" alt="" />
+                </div>
+            </div>
+            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+                <div class="scr title">Payment system</div>
+                <div class="scr description">
+                    Our goal with the GymQ payment system was to create a seamless way for gym owners to log and accept either physical or digital payments as
+                    well as blocking or allowing specific gym features for members who purchased different packages.
+                </div>
+                <div class="static-impress gymq-pay">
+                    <div class="scr credit-card">
+                        <img class="chip" src="/assets/credit-cards/chip.svg" alt="" />
+                        <div class="nums">1111 2222 3333 4444</div>
+                        <img src="/assets/credit-cards/visa.svg" alt="" class="visa-logo" />
+                        <img src="/assets/credit-cards/nbg.svg" alt="" class="nbg" />
+                        <div class="cardholder">cardholder n.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+                <div class="scr title">Message queues</div>
+                <div class="scr description">
+                    To ensure scalability for the app we used a seperate messaging instance with a queue architecture to ensure that the system can handle a
+                    large amount of sms and email notifications.
+                </div>
+                <div class="static-impress gymq-messages">
+                    <img src="/assets/personal/notification.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- covidTracker -->
+    <div class="experience-wrapper covid">
+        <div class="scr experience" animateOnScroll animationName="fade-up">
+            <div class="scr title-wrapper">
+                <img src="/assets/personal/covid-tracker.svg" alt="" />
+                <div class="title-timeframe-col">
+                    <div class="scr title">covidTracker</div>
+                    <div class="scr timeframe">Apr 2020 - May 2020</div>
+                </div>
+            </div>
+            <div class="scr description">
+                <div class="section">
+                    We created covidTracker in 2019 when covid cases where rising in Greece in hopes that we could help isolate outbursts of covid-19.
+                    Covidtracker was a mobile application created with React Native, that allowed users to track their activity and notified them when they had
+                    come in contact with a confirmed covid case.
+                </div>
+                <div class="section">
+                    The app initially gained a lot of interest from mainstream media and political figures but unfortunately it was discarded due to
+                    bureaucratic reasons as well as the Greek citizens distrust towards the government regarding data collection.
+                </div>
+                <div class="section">
+                    <a target="blank" href="https://covid.bitleaf.gr/"><i nz-icon nzType="link" nzTheme="outline"></i> Website</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- covidTracker Details -->
+    <div class="projects covid">
+        <div class="scr section-title-sm" animateOnScroll [useScroll]="false" animationName="fade-up">Project overview</div>
+        <div class="project-wrapper">
+            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+                <div class="scr title">UI/UX design</div>
+                <div class="scr description">
+                    I was responsible for designing all the views and animations for the covid tracker application, as well as ensuring ease of use. I also
+                    added screens with quick actions such as calling the health department or getting real time statistics for the pandemic status in the
+                    country.
+                </div>
+                <div class="static-impress gymq-design">
+                    <img class="design" src="/assets/personal/covid-design.png" alt="" />
+                </div>
+            </div>
+            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+                <div class="scr title">iOS/Android app</div>
+                <div class="scr description">
+                    We created the covidTracker mobile app using React Native and Redux for state management. As we intended for lots of people with different
+                    kinds of phones to use the app, we decided to use React Native for better performance.
+                </div>
+                <div class="static-impress drasys-frontend">
+                    <div class="decoration"></div>
+                    <div class="decoration secondary"></div>
+                    <div class="decoration tertiary"></div>
+                    <img class="scr" src="/assets/logos/react.svg" alt="" />
+                    <img class="scr" src="/assets/logos/redux.svg" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

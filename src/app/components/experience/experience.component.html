@@ -1,0 +1,52 @@
+<div class="wrapper">
+    <div class="scr section-title" animateOnScroll animationName="fade-up">Experience</div>
+    <div class="experience-wrapper">
+        <div class="scr experience" animateOnScroll animationName="fade-up">
+            <div class="scr title">
+                <img src="/assets/experience/nokia.svg" alt="" />
+            </div>
+            <div class="scr timeframe">Oct 2018 - Aug 2019</div>
+            <div class="scr description">
+                <div class="section">
+                    <div class="scr">CI Tool Engineering in the form of web applications</div>
+                    <div class="scr">Custom tools for Nokia developers in various company departments</div>
+                    <div class="scr">HR/People management applications</div>
+                </div>
+                <div class="scr section">
+                    Re-implemented all the tools the team had to maintain, using modern frameworks and the same programming languages across the board, to
+                    decrease the steep learning curve for new team members.
+                </div>
+                <div class="scr section">
+                    Redesigned legacy and cumbersome people management/talent recruitment applications to reignite interest and boost usage from the HR
+                    department and company managers.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="projects">
+        <div class="scr section-title-sm" animateOnScroll [useScroll]="false" animationName="fade-up">Projects overview</div>
+        <div class="project-wrapper">
+            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+                <div class="scr title">CI Dashboard</div>
+                <div class="scr description">
+                    Our team was responsible for maintaining and adding new features to a dashboard that displayed CI related data for a Nokia cloud product.
+                    This project included webhooks for various Jenkins CI jobs or Gitlab commits, so that the data could be easily displayed in a readable
+                    manner for Nokia developers in various countries.
+                </div>
+                <div class="impress-section">
+                    <ci-dashboard-cards></ci-dashboard-cards>
+                </div>
+            </div>
+            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+                <div class="scr title">Competence catalogue</div>
+                <div class="scr description">
+                    Our team developed a tool that used Nokia employee data to make it easier for management and HR to create teams for various company
+                    projects, depending on their competence and education level.
+                </div>
+                <div class="impress-section">
+                    <sophia-skills></sophia-skills>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
