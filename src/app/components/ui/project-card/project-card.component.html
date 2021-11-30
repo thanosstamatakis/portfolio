@@ -1,0 +1,15 @@
+<div class="scr card" #card isInView isInViewClass="fade-up">
+    <ng-content select="[title]"></ng-content>
+    <ng-content select="[content]"></ng-content>
+    <div class="scr impress" *ngIf="!technologies">
+        <ng-content select="[image]"></ng-content>
+    </div>
+    <ng-container *ngIf="technologies">
+        <div class="technology-wrapper scr">
+            <div *ngIf="bubblePrimary" [style.background-color]="bubblePrimary" class="decoration primary"></div>
+            <div *ngIf="bubbleSecondary" [style.background-color]="bubbleSecondary" class="decoration secondary"></div>
+            <div *ngIf="bubbleTertiary" [style.background-color]="bubbleTertiary" class="decoration tertiary"></div>
+            <img class="scr" *ngFor="let tech of technologies" [src]="'/assets/logos/' + tech + '.svg'" alt="" />
+        </div>
+    </ng-container>
+</div>

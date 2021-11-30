@@ -1,7 +1,7 @@
 <div class="wrapper">
-    <div class="scr section-title" animateOnScroll animationName="fade-up">Experience</div>
+    <div class="scr section-title" isInView isInViewClass="fade-up">Experience</div>
     <div class="experience-wrapper">
-        <div class="scr experience" animateOnScroll animationName="fade-up">
+        <div class="scr experience" isInView isInViewClass="fade-up">
             <div class="scr title">
                 <img src="/assets/experience/nokia.svg" alt="" />
             </div>
@@ -24,9 +24,9 @@
         </div>
     </div>
     <div class="projects">
-        <div class="scr section-title-sm" animateOnScroll [useScroll]="false" animationName="fade-up">Projects overview</div>
+        <div class="scr section-title-sm" isInView isInViewClass="fade-up">Projects overview</div>
         <div class="project-wrapper">
-            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+            <!-- <div class="scr project" isInView isInViewClass="fade-up">
                 <div class="scr title">CI Dashboard</div>
                 <div class="scr description">
                     Our team was responsible for maintaining and adding new features to a dashboard that displayed CI related data for a Nokia cloud product.
@@ -37,7 +37,7 @@
                     <ci-dashboard-cards></ci-dashboard-cards>
                 </div>
             </div>
-            <div class="scr project" animateOnScroll [useScroll]="false" animationName="fade-up">
+            <div class="scr project" isInView isInViewClass="fade-up">
                 <div class="scr title">Competence catalogue</div>
                 <div class="scr description">
                     Our team developed a tool that used Nokia employee data to make it easier for management and HR to create teams for various company
@@ -46,7 +46,24 @@
                 <div class="impress-section">
                     <sophia-skills></sophia-skills>
                 </div>
-            </div>
+            </div> -->
+            <project-card primary="var(--nokia-color-secondary)" secondary="var(--nokia-color)">
+                <h1 class="scr" title>CI Dashboard</h1>
+                <p class="scr" content>
+                    Our team was responsible for maintaining and adding new features to a dashboard that displayed CI related data for a Nokia cloud product.
+                    This project included webhooks for various Jenkins CI jobs or Gitlab commits, so that the data could be easily displayed in a readable
+                    manner for Nokia developers in various countries.
+                </p>
+                <ci-dashboard-cards class="ghost-right" image></ci-dashboard-cards>
+            </project-card>
+            <project-card primary="var(--nokia-color-secondary)" secondary="var(--nokia-color)">
+                <h1 class="scr" title>Competence catalogue</h1>
+                <p class="scr" content>
+                    Our team developed a tool that used Nokia employee data to make it easier for management and HR to create teams for various company
+                    projects, depending on their competence and education level.
+                </p>
+                <sophia-skills class="center-image" image></sophia-skills>
+            </project-card>
         </div>
     </div>
 </div>

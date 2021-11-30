@@ -66,7 +66,7 @@ body {
         opacity: 1;
         transform: translateY(0px);
 
-        @for $i from 1 through 10 {
+        @for $i from 1 through 25 {
             .scr:nth-child(#{$i}) {
                 opacity: 1;
                 transform: translateY(0px);
@@ -85,7 +85,7 @@ body {
         opacity: 1;
         transform: translate(0px, 0px);
 
-        @for $i from 1 through 10 {
+        @for $i from 1 through 25 {
             .scr-fir:nth-child(#{$i}) {
                 opacity: 1;
                 transform: translate(0px, 0px);

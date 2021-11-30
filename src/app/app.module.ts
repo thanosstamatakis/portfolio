@@ -10,7 +10,6 @@ import en from '@angular/common/locales/en';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 // Components
 import { HeroComponent } from './components/hero/hero.component';
 import { CiDashboardCardsComponent } from './components/ui/ci-dashboard-cards/ci-dashboard-cards.component';
@@ -25,6 +24,8 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzMessageModule } from 'ng-zorro-antd/message';
+import { IsInViewDirective } from './helpers/is-in-view/is-in-view.directive';
+import { ProjectCardComponent } from './components/ui/project-card/project-card.component';
 
 const ngZorroModules = [NzIconModule, NzSkeletonModule, NzFormModule, NzInputModule, NzButtonModule, NzMessageModule];
 
@@ -39,17 +40,10 @@ registerLocaleData(en);
         SophiaSkillsComponent,
         PersonalProjectsComponent,
         ContactFormComponent,
+        IsInViewDirective,
+        ProjectCardComponent,
     ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        ReactiveFormsModule,
-        HttpClientModule,
-        BrowserAnimationsModule,
-        AnimateOnScrollModule.forRoot(),
-        ...ngZorroModules,
-    ],
+    imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule, BrowserAnimationsModule, ...ngZorroModules],
     providers: [{ provide: NZ_I18N, useValue: en_US }],
     bootstrap: [AppComponent],
 })
