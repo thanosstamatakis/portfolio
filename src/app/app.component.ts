@@ -1,7 +1,4 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { NavigationEnd, Router } from '@angular/router';
-
-declare let gtag: Function;
 
 @Component({
     selector: 'app-root',
@@ -9,15 +6,7 @@ declare let gtag: Function;
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, AfterViewInit {
-    constructor(private router: Router) {
-        this.router.events.subscribe((ev) => {
-            if (ev instanceof NavigationEnd) {
-                gtag('config', 'G-PJFQ5763TB', {
-                    page_path: ev.urlAfterRedirects,
-                });
-            }
-        });
-    }
+    constructor() {}
 
     public ngOnInit(): void {}
 
