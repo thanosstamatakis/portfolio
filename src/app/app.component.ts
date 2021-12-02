@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { NzMessageService } from 'ng-zorro-antd/message';
+import { NavigationEnd, Router } from '@angular/router';
+
+declare let gtag: Function;
 
 @Component({
     selector: 'app-root',
@@ -7,7 +9,15 @@ import { NzMessageService } from 'ng-zorro-antd/message';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit, AfterViewInit {
-    constructor(private message: NzMessageService) {}
+    constructor(private router: Router) {
+        this.router.events.subscribe((ev) => {
+            if (ev instanceof NavigationEnd) {
+                gtag('config', 'G-PJFQ5763TB', {
+                    page_path: ev.urlAfterRedirects,
+                });
+            }
+        });
+    }
 
     public ngOnInit(): void {}
 

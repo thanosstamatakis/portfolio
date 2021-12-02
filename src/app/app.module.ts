@@ -29,6 +29,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzMessageModule } from 'ng-zorro-antd/message';
 import { NzImageModule } from 'ng-zorro-antd/image';
+import { GoogleAnalyticsService } from './services/google-analytics/google-analytics.service';
 
 const ngZorroModules = [NzIconModule, NzSkeletonModule, NzFormModule, NzInputModule, NzButtonModule, NzMessageModule, NzImageModule];
 
@@ -48,7 +49,7 @@ registerLocaleData(en);
         ProjectGalleryComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule, BrowserAnimationsModule, ...ngZorroModules],
-    providers: [{ provide: NZ_I18N, useValue: en_US }],
+    providers: [{ provide: NZ_I18N, useValue: en_US }, GoogleAnalyticsService],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

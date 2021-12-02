@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NzImage, NzImageService } from 'ng-zorro-antd/image';
+import { GoogleAnalyticsService } from 'src/app/services/google-analytics/google-analytics.service';
 
 @Component({
     selector: 'project-gallery',
@@ -7,12 +8,13 @@ import { NzImage, NzImageService } from 'ng-zorro-antd/image';
     styleUrls: ['./project-gallery.component.scss'],
 })
 export class ProjectGalleryComponent implements OnInit {
-    constructor(private imageService: NzImageService) {}
+    constructor(private imageService: NzImageService, private analytics: GoogleAnalyticsService) {}
 
     thumbnailTransformation = 'c_thumb,w_200,h_112';
     thumbnails = [];
     @Input() blobPrimary: string;
     @Input() blobSecondary: string;
+    @Input() projectName: string;
     @Input() blobTertiary: string;
     @Input() images: NzImage[] = [
         { src: 'https://res.cloudinary.com/stamatakis/image/upload/v1638233732/portfolio/gymq/1' },
@@ -24,6 +26,7 @@ export class ProjectGalleryComponent implements OnInit {
     public openPreview(index: number): void {
         let previewRef = this.imageService.preview(this.images);
         previewRef.switchTo(index);
+        this.analytics.eventEmitter('open_gallery', 'view', this.projectName, 'click', index);
     }
 
     ngOnInit(): void {
