@@ -1,0 +1,77 @@
+@import 'src/styles.scss';
+
+h1 {
+    text-align: center;
+    @include no-drag;
+    @include no-select;
+}
+
+.img-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+
+    img {
+        margin: 10px;
+        background: rgba(255, 255, 255, 0.65);
+        padding: 3px;
+        box-shadow: var(--shadow-xl);
+        border-radius: 0.5rem;
+        @include no-drag;
+        @include no-select;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &.lock {
+            filter: blur(5px);
+        }
+    }
+
+    .blob-wrapper {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .blob {
+            width: 200px;
+            height: 200px;
+            background: rgba(250, 100, 0, 0.3);
+            border-radius: 50%;
+            z-index: 0;
+            opacity: 0;
+            transform: scale(0);
+            transition: 2000ms ease-in-out;
+            transition-delay: 300ms;
+            filter: blur(50px);
+
+            &.secondary {
+                background: rgba(250, 227, 80, 0.3);
+                transition-delay: 600ms;
+            }
+
+            &.tertiary {
+                background: rgba(255, 30, 0, 0.3);
+                transition-delay: 900ms;
+            }
+
+            &.entry {
+                opacity: 0.45;
+                transform: scale(1);
+            }
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        img {
+            max-height: 80px;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+<ng-content select="[title]"></ng-content>
+<div class="img-wrapper scr" isInView isInViewClass="fade-up">
+    <div class="blob-wrapper">
+        <div *ngIf="blobPrimary" [style.background-color]="blobPrimary" isInView isInViewClass="entry" class="blob"></div>
+        <div *ngIf="blobSecondary" [style.background-color]="blobSecondary" isInView isInViewClass="entry" class="blob secondary"></div>
+        <div *ngIf="blobTertiary" [style.background-color]="blobTertiary" isInView isInViewClass="entry" class="blob tertiary"></div>
+    </div>
+    <ng-container *ngFor="let src of thumbnails; let i = index">
+        <img [src]="src" class="scr" alt="" (click)="openPreview(i)" />
+    </ng-container>
+</div>

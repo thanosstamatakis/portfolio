@@ -95,7 +95,40 @@ body {
     }
 }
 
+::ng-deep {
+    .ant-image-preview-img {
+        margin-top: 46px;
+        max-height: calc(100% - 46px);
+    }
+    .ant-image-preview-mask {
+        backdrop-filter: blur(20px);
+    }
+}
+
 img {
     @include no-drag();
     @include no-select();
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 2rem;
+    box-shadow: var(--shadow-md);
+    transition: 300ms ease-in-out;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.35);
 }

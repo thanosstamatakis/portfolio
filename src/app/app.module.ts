@@ -16,6 +16,10 @@ import { CiDashboardCardsComponent } from './components/ui/ci-dashboard-cards/ci
 import { ExperienceComponent } from './components/experience/experience.component';
 import { SophiaSkillsComponent } from './components/ui/sophia-skills/sophia-skills.component';
 import { ContactFormComponent } from './components/ui/contact-form/contact-form.component';
+import { ProjectCardComponent } from './components/ui/project-card/project-card.component';
+import { ProjectGalleryComponent } from './components/ui/project-gallery/project-gallery.component';
+// Directives
+import { IsInViewDirective } from './helpers/is-in-view/is-in-view.directive';
 // NgZorro
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
@@ -24,10 +28,9 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzMessageModule } from 'ng-zorro-antd/message';
-import { IsInViewDirective } from './helpers/is-in-view/is-in-view.directive';
-import { ProjectCardComponent } from './components/ui/project-card/project-card.component';
+import { NzImageModule } from 'ng-zorro-antd/image';
 
-const ngZorroModules = [NzIconModule, NzSkeletonModule, NzFormModule, NzInputModule, NzButtonModule, NzMessageModule];
+const ngZorroModules = [NzIconModule, NzSkeletonModule, NzFormModule, NzInputModule, NzButtonModule, NzMessageModule, NzImageModule];
 
 registerLocaleData(en);
 
@@ -42,6 +45,7 @@ registerLocaleData(en);
         ContactFormComponent,
         IsInViewDirective,
         ProjectCardComponent,
+        ProjectGalleryComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule, BrowserAnimationsModule, ...ngZorroModules],
     providers: [{ provide: NZ_I18N, useValue: en_US }],
