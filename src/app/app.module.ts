@@ -18,6 +18,7 @@ import { SophiaSkillsComponent } from './components/ui/sophia-skills/sophia-skil
 import { ContactFormComponent } from './components/ui/contact-form/contact-form.component';
 import { ProjectCardComponent } from './components/ui/project-card/project-card.component';
 import { ProjectGalleryComponent } from './components/ui/project-gallery/project-gallery.component';
+import { ProjectDescriptionComponent } from './components/ui/project-description/project-description.component';
 // Directives
 import { IsInViewDirective } from './helpers/is-in-view/is-in-view.directive';
 // NgZorro
@@ -47,6 +48,7 @@ registerLocaleData(en);
         IsInViewDirective,
         ProjectCardComponent,
         ProjectGalleryComponent,
+        ProjectDescriptionComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule, BrowserAnimationsModule, ...ngZorroModules],
     providers: [{ provide: NZ_I18N, useValue: en_US }, GoogleAnalyticsService],

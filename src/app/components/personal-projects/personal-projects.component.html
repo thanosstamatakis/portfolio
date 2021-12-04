@@ -2,31 +2,30 @@
     <div class="scr section-title" isInView isInViewClass="fade-up">Personal projects</div>
     <!-- Brightness Control -->
     <div class="experience-wrapper brightness">
-        <div class="scr experience" isInView isInViewClass="fade-up">
-            <div class="scr title-wrapper">
-                <img src="/assets/personal/brightness.svg" alt="" />
-                <div class="title-timeframe-col">
-                    <div class="scr title">Brightness Control</div>
-                    <div class="scr timeframe">Nov 2021 - Present</div>
-                </div>
-            </div>
-            <div class="scr description">
-                <div class="section">
+        <project-description
+            logo="/assets/personal/brightness.svg"
+            name="Brightness control"
+            timeframe="Nov 2021 - Present"
+            primaryColor="var(--gradient-color-1)"
+            secondaryColor="var(--gradient-color-3)"
+        >
+            <div description>
+                <div class="scr section">
                     Brightness control is a native macOS status bar application that listens for the F1 & F2 keys and changes brightness for external monitors
                     utilizing the DDC/CI protocol. It was my first attempt to create a native macOS app and i had to learn how to use XCode as well as Swift and
                     SwiftUI.
                 </div>
-                <div class="section">
+                <div class="scr section">
                     Brightness control also displays the native macOS huds that appear when changing the brightness on a Macbook or iMac to make the experience
                     feel more authentic.
                 </div>
-                <div class="section">
-                    <a target="blank" href="https://github.com/thanosstamatakis/brightness-control-macos"
+                <div class="scr section buttons">
+                    <a class="scr" target="blank" href="https://github.com/thanosstamatakis/brightness-control-macos"
                         ><i nz-icon nzType="github" nzTheme="outline"></i> Find it on Git</a
                     >
                 </div>
             </div>
-        </div>
+        </project-description>
     </div>
 
     <project-gallery projectName="brightness" blobPrimary="#96B9FF" blobSecondary="#416BAA" blobTertiary="#6C91D4" [images]="projects?.brightness?.images">
@@ -63,31 +62,27 @@
 
     <!-- Drasys -->
     <div class="experience-wrapper drasys">
-        <div class="scr experience" isInView isInViewClass="fade-up">
-            <div class="scr title-wrapper">
-                <img src="/assets/personal/drasys.svg" alt="" />
-                <div class="title-timeframe-col">
-                    <div class="scr title">
-                        Drasys bio
-                        <!-- <img src="/assets/personal/gymq.svg" alt="" /> -->
-                    </div>
-                    <div class="scr timeframe">Sep 2020 - Present</div>
-                </div>
-            </div>
-            <div class="scr description">
-                <div class="section">
+        <project-description
+            logo="/assets/personal/drasys.svg"
+            name="Drasys bio"
+            timeframe="SEP 2020 - PRESENT"
+            primaryColor="var(--drasys-color)"
+            secondaryColor="var(--drasys-color-secondary)"
+        >
+            <div description>
+                <div class="scr section">
                     Drasys bio is a startup from Patras, Greece that is involved in constructing bioreactors with innovative architectures as well as a state of
                     the art software solution to control multiple bioreactors and their subdevices (pumps, sensors, thermals etc.)
                 </div>
-                <div class="section">
+                <div class="scr section">
                     My team and i had to come up with a solution to abstractify the control process and make the development process more accessible for web
                     developers.
                 </div>
-                <div class="section">
-                    <a target="blank" href="https://drasysbio.com/"><i nz-icon nzType="link" nzTheme="outline"></i> Drasys bio website</a>
+                <div class="scr section buttons">
+                    <a class="scr" target="blank" href="https://drasysbio.com/"><i nz-icon nzType="link" nzTheme="outline"></i> Drasys bio website</a>
                 </div>
             </div>
-        </div>
+        </project-description>
     </div>
 
     <!-- Drasys Gallery -->
@@ -140,32 +135,26 @@
 
     <!-- GymQ -->
     <div class="experience-wrapper gymq">
-        <div class="scr experience" isInView isInViewClass="fade-up">
-            <div class="scr title-wrapper">
-                <img src="/assets/personal/gymq.svg" alt="" />
-                <div class="title-timeframe-col">
-                    <div class="scr title">
-                        GymQ
-                        <!-- <img src="/assets/personal/gymq.svg" alt="" /> -->
-                    </div>
-                    <div class="scr timeframe">Jun 2020 - Present</div>
-                </div>
-            </div>
-            <div class="scr description">
-                <div class="section">
+        <project-description
+            logo="/assets/personal/gymq.svg"
+            name="GymQ"
+            timeframe="JUN 2020 - PRESENT"
+            primaryColor="var(--gymq-color)"
+            secondaryColor="var(--gymq-color-secondary)"
+        >
+            <div description>
+                <div class="scr section">
                     GymQ is an all in one client management/engagement solution for gym owners, giving them the ability to interact with their customers. It
                     provides messaging (email, SMS) functionality, a flexible online booking system to address crowding issues in gyms during the pandemic. It
                     also provides a powerful payment system with the ability to log physical payments or accept online payments using the Stripe Connect API.
                 </div>
-                <div class="section">Currently only for greek gyms</div>
-                <div class="section">
-                    <a target="blank" href="https://gymq.gr"><i nz-icon nzType="link" nzTheme="outline"></i> GymQ Website</a>
-                </div>
-                <div class="section">
-                    <a target="blank" href="https://app.gymq.gr"><i nz-icon nzType="link" nzTheme="outline"></i> GymQ App</a>
+                <div class="scr section">Currently only for greek gyms</div>
+                <div class="scr section buttons">
+                    <a class="scr" target="blank" href="https://gymq.gr"><i nz-icon nzType="link" nzTheme="outline"></i>Website</a>
+                    <a class="scr" target="blank" href="https://app.gymq.gr"><i nz-icon nzType="link" nzTheme="outline"></i>Web App</a>
                 </div>
             </div>
-        </div>
+        </project-description>
     </div>
 
     <!-- GymQ Gallery -->
@@ -226,29 +215,28 @@
 
     <!-- covidTracker -->
     <div class="experience-wrapper covid">
-        <div class="scr experience" isInView isInViewClass="fade-up">
-            <div class="scr title-wrapper">
-                <img src="/assets/personal/covid-tracker.svg" alt="" />
-                <div class="title-timeframe-col">
-                    <div class="scr title">covidTracker</div>
-                    <div class="scr timeframe">Apr 2020 - May 2020</div>
-                </div>
-            </div>
-            <div class="scr description">
-                <div class="section">
+        <project-description
+            logo="/assets/personal/covid-tracker.svg"
+            name="covidTracker"
+            timeframe="APR 2020 - MAY 2020"
+            primaryColor="var(--covid-color)"
+            secondaryColor="var(--covid-color-secondary)"
+        >
+            <div description>
+                <div class="scr section">
                     We created covidTracker in 2019 when covid cases where rising in Greece in hopes that we could help isolate outbursts of covid-19.
                     Covidtracker was a mobile application created with React Native, that allowed users to track their activity and notified them when they had
                     come in contact with a confirmed covid case.
                 </div>
-                <div class="section">
+                <div class="scr section">
                     The app initially gained a lot of interest from mainstream media and political figures but unfortunately it was discarded due to
                     bureaucratic reasons as well as the Greek citizens distrust towards the government regarding data collection.
                 </div>
-                <div class="section">
-                    <a target="blank" href="https://covid.bitleaf.gr/"><i nz-icon nzType="link" nzTheme="outline"></i> Website</a>
+                <div class="scr section buttons">
+                    <a class="scr" target="blank" href="https://covid.bitleaf.gr/"><i nz-icon nzType="link" nzTheme="outline"></i> Website</a>
                 </div>
             </div>
-        </div>
+        </project-description>
     </div>
     <!-- covidTracker Gallery -->
     <project-gallery projectName="covid" blobPrimary="#61AABA" blobSecondary="#1C6E7D" blobTertiary="#A1EAFA" [images]="projects?.covidtracker?.images">

@@ -1,0 +1,10 @@
+<div isInView isInViewClass="fade-up" class="scr project-description-wrapper" [attr.style]="sanitizer.bypassSecurityTrustStyle(styleString)">
+    <div class="scr title-wrapper">
+        <img class="scr" [src]="logo" />
+        <div class="scr title-timeframe-col">
+            <div class="scr title">{{ name }}</div>
+            <div class="scr timeframe">{{ timeframe }}</div>
+        </div>
+    </div>
+    <ng-content select="[description]"></ng-content>
+</div>
