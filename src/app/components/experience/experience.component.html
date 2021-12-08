@@ -1,13 +1,17 @@
 <div class="wrapper">
     <div class="scr section-title" isInView isInViewClass="fade-up">Experience</div>
+    <!-- Nokia -->
     <div class="experience-wrapper">
-        <div class="scr experience" isInView isInViewClass="fade-up">
-            <div class="scr title">
-                <img src="/assets/experience/nokia.svg" alt="" />
-            </div>
-            <div class="scr timeframe">Oct 2018 - Aug 2019</div>
-            <div class="scr description">
-                <div class="section">
+        <project-description
+            logo="/assets/experience/nokia.svg"
+            name="Nokia"
+            [logoSide]="false"
+            timeframe="NOV 2018 - AUG 2019"
+            primaryColor="var(--nokia-color)"
+            secondaryColor="var(--nokia-color-secondary)"
+        >
+            <div description>
+                <div class="scr section">
                     <div class="scr">CI Tool Engineering in the form of web applications</div>
                     <div class="scr">Custom tools for Nokia developers in various company departments</div>
                     <div class="scr">HR/People management applications</div>
@@ -21,32 +25,13 @@
                     department and company managers.
                 </div>
             </div>
-        </div>
+        </project-description>
     </div>
+
+    <!-- Nokia Details -->
     <div class="projects">
         <div class="scr section-title-sm" isInView isInViewClass="fade-up">Projects overview</div>
         <div class="project-wrapper">
-            <!-- <div class="scr project" isInView isInViewClass="fade-up">
-                <div class="scr title">CI Dashboard</div>
-                <div class="scr description">
-                    Our team was responsible for maintaining and adding new features to a dashboard that displayed CI related data for a Nokia cloud product.
-                    This project included webhooks for various Jenkins CI jobs or Gitlab commits, so that the data could be easily displayed in a readable
-                    manner for Nokia developers in various countries.
-                </div>
-                <div class="impress-section">
-                    <ci-dashboard-cards></ci-dashboard-cards>
-                </div>
-            </div>
-            <div class="scr project" isInView isInViewClass="fade-up">
-                <div class="scr title">Competence catalogue</div>
-                <div class="scr description">
-                    Our team developed a tool that used Nokia employee data to make it easier for management and HR to create teams for various company
-                    projects, depending on their competence and education level.
-                </div>
-                <div class="impress-section">
-                    <sophia-skills></sophia-skills>
-                </div>
-            </div> -->
             <project-card primary="var(--nokia-color-secondary)" secondary="var(--nokia-color)">
                 <h1 class="scr" title>CI Dashboard</h1>
                 <p class="scr" content>
@@ -63,6 +48,159 @@
                     projects, depending on their competence and education level.
                 </p>
                 <sophia-skills class="center-image" image></sophia-skills>
+            </project-card>
+        </div>
+    </div>
+
+    <!-- GymQ -->
+    <div class="experience-wrapper gymq">
+        <project-description
+            logo="/assets/personal/gymq.svg"
+            name="GymQ"
+            timeframe="APR 2020 - JAN 2021"
+            primaryColor="var(--gymq-color)"
+            secondaryColor="var(--gymq-color-secondary)"
+        >
+            <div description>
+                <div class="scr section">
+                    GymQ is an all in one client management/engagement solution for gym owners, giving them the ability to interact with their customers. It
+                    provides messaging (email, SMS) functionality, a flexible online booking system to address crowding issues in gyms during the pandemic. It
+                    also provides a powerful payment system with the ability to log physical payments or accept online payments using the Stripe Connect API.
+                </div>
+                <div class="scr section">Currently only for greek gyms</div>
+                <div class="scr section buttons">
+                    <a class="scr" target="blank" href="https://gymq.gr"><i nz-icon nzType="link" nzTheme="outline"></i> Website</a>
+                    <a class="scr" target="blank" href="https://app.gymq.gr"><i nz-icon nzType="link" nzTheme="outline"></i> Web App</a>
+                </div>
+            </div>
+        </project-description>
+    </div>
+
+    <!-- GymQ Gallery -->
+    <project-gallery projectName="gymq" blobPrimary="#FFD686" blobSecondary="#FFC89C" blobTertiary="#FFC2B2" [images]="projects?.gymq?.images">
+        <div title class="scr gallery-title" isInView isInViewClass="fade-up">GymQ gallery</div>
+    </project-gallery>
+
+    <!-- GymQ Details -->
+    <div class="projects">
+        <div class="section-title-sm" isInView isInViewClass="fade-up">Project overview</div>
+        <div class="project-wrapper">
+            <project-card primary="var(--gymq-color)" secondary="var(--gymq-color-secondary)">
+                <h1 class="scr" title>UI/UX design</h1>
+                <p class="scr" content>
+                    I was responsible for designing all the views for the GymQ web application, as well as ensuring ease of use for less technichaly inclined
+                    users. In addition i designed the GymQ promotional website and the mobile application for iOS and Android.
+                </p>
+                <img image class="blueprint" src="/assets/personal/gymq-design.svg" alt="" />
+            </project-card>
+            <project-card
+                primary="var(--gymq-color)"
+                secondary="var(--gymq-color-secondary)"
+                [technologies]="['angular', 'ionic']"
+                bubblePrimary="#B2E4DB"
+                bubbleSecondary="#B0C6CE"
+            >
+                <h1 class="scr" title>Frontend development</h1>
+                <p class="scr" content>
+                    We created the GymQ web app using the Angular framework. By using Angular and writting maintainable components and services we could
+                    transfer all existing work from the web to mobile platforms using Ionic in just one week.
+                </p>
+                <sophia-skills class="center-image" image></sophia-skills>
+            </project-card>
+            <project-card primary="var(--gymq-color)" secondary="var(--gymq-color-secondary)">
+                <h1 class="scr" title>Payment system</h1>
+                <p class="scr" content>
+                    Our goal with the GymQ payment system was to create a seamless way for gym owners to log and accept either physical or digital payments as
+                    well as blocking or allowing specific gym features for members who purchased different packages.
+                </p>
+                <div class="credit-card" image>
+                    <img class="chip" src="/assets/credit-cards/chip.svg" alt="" />
+                    <div class="nums">1111 2222 3333 4444</div>
+                    <img src="/assets/credit-cards/visa.svg" alt="" class="visa-logo" />
+                    <img src="/assets/credit-cards/nbg.svg" alt="" class="nbg" />
+                    <div class="cardholder">cardholder n.</div>
+                </div>
+            </project-card>
+            <project-card primary="var(--gymq-color)" secondary="var(--gymq-color-secondary)">
+                <h1 class="scr" title>Message queues</h1>
+                <p class="scr" content>
+                    To ensure scalability for the app we used a seperate messaging instance with a queue architecture to ensure that the system can handle a
+                    large amount of sms and email notifications.
+                </p>
+                <img image src="/assets/personal/notification.svg" class="ghost-right notification" alt="" />
+            </project-card>
+        </div>
+    </div>
+
+    <!-- Drasys -->
+    <div class="experience-wrapper drasys">
+        <project-description
+            logo="/assets/personal/drasys.svg"
+            name="Drasys bio"
+            timeframe="SEP 2020 - PRESENT"
+            primaryColor="var(--drasys-color)"
+            secondaryColor="var(--drasys-color-secondary)"
+        >
+            <div description>
+                <div class="scr section">
+                    Drasys bio is a startup from Patras, Greece that is involved in constructing bioreactors with innovative architectures as well as a state of
+                    the art software solution to control multiple bioreactors and their subdevices (pumps, sensors, thermals etc.)
+                </div>
+                <div class="scr section">
+                    My team and i had to come up with a solution to abstractify the control process and make the development process more accessible for web
+                    developers.
+                </div>
+                <div class="scr section buttons">
+                    <a class="scr" target="blank" href="https://drasysbio.com/"><i nz-icon nzType="link" nzTheme="outline"></i> Drasys bio website</a>
+                </div>
+            </div>
+        </project-description>
+    </div>
+
+    <!-- Drasys Gallery -->
+    <project-gallery projectName="drasys" blobPrimary="#82DAA3" blobTertiary="#278251" blobSecondary="#56AD79" [images]="projects?.drasys?.images">
+        <div title class="scr gallery-title" isInView isInViewClass="fade-up">Drasys gallery</div>
+    </project-gallery>
+
+    <!-- Drasys Details -->
+    <div class="projects">
+        <div class="scr section-title-sm" isInView isInViewClass="fade-up">Project overview</div>
+        <div class="project-wrapper">
+            <project-card primary="var(--drasys-color)" secondary="var(--drasys-color-secondary)">
+                <h1 title>UI/UX design</h1>
+                <p content>
+                    I was responsible for designing all the views for the Drasys bio desktop application, as well as ensuring consistency between views in each
+                    platform while preserving native features. In addition i was responsible for rendering various assets in Blender to make the app more
+                    interactive.
+                </p>
+                <img image class="blueprint" src="/assets/personal/drasys-design.svg" alt="" />
+            </project-card>
+            <project-card
+                primary="var(--drasys-color)"
+                secondary="var(--drasys-color-secondary)"
+                [technologies]="['angular', 'socketio', 'electron']"
+                bubblePrimary="#9F8AC2"
+                bubbleSecondary="#9D77D9"
+                bubbleTertiary="#63F29A"
+            >
+                <h1 class="scr" title>Frontend development</h1>
+                <p class="scr" content>
+                    We created the Drasys bio desktop app using Electron, Angular and Vue.js (for some smaller components). We also used web sockets to make the
+                    data connection between hardware devices and any connected client real time.
+                </p>
+            </project-card>
+            <project-card primary="var(--drasys-color)" secondary="var(--drasys-color-secondary)">
+                <h1 class="scr" title>From hardware to the web</h1>
+                <p class="scr" content>
+                    Controlling the bioreactor environment is impossible without considering the hardware component. By using a backend server that communicates
+                    via mqtt with a RS485 master device we can essentially convert our bioreactors to cloud based bioreactors.
+                </p>
+                <img class="center-image" src="/assets/personal/deth-2.png" image />
+            </project-card>
+            <project-card primary="var(--drasys-color)" secondary="var(--drasys-color-secondary)">
+                <h1 class="scr" title>Sensor calibration</h1>
+                <p class="scr" content>To make the system as easy to use as possible we baked a sensor calibration workflow inside the desktop client.</p>
+                <img class="center-image" src="/assets/personal/sensor.png" image />
             </project-card>
         </div>
     </div>
